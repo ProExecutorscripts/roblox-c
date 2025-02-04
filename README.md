@@ -2,6 +2,7 @@
 C and C++ to Luau compiler for Roblox.
 
 ## Supports
+
 ### C with:
 - Enums
 - If statements
@@ -16,30 +17,40 @@ C and C++ to Luau compiler for Roblox.
 - Strings
 - elseif
 - For loops
-- casting
+- Casting
 - else
-- `*` & `&`
+- `*` & `&` (Pointers and Addresses)
 - Unions
 - `main` functions
 - Gotos (Lua 5.2+)
 - Short & Long values
-- `++` & `--`
+- `++` & `--` (Increment and Decrement)
 - Arrays
-- Indexing
+- Indexing (`[]`)
 - switch (with fallthrough)
-- Binary operators (`<<`, `>>`, `|`, `&`)
+- Binary operators (`<<`, `>>`, `|`, `&`, `^`)
+
 ### C++ with:
-- everything in C
-- classes
-- constructors
-- delete
-- new
-- namespaces
-- destructors
-- inhertiance
+- Everything in C
+- Classes
+- Constructors
+- `delete`
+- `new`
+- Namespaces
+- Destructors
+- Inheritance
+
 ## Todo
-- `->`
-- indexing
-- `this`
-- Roblox bindings 
-- structs in unions
+
+- `->` (Pointer Member Access)
+- Indexing (More robust array and member indexing)
+- `this` (C++ `this` pointer)
+- Roblox bindings (Directly interact with Roblox API from C/C++)
+- Structs in unions (Nested structs and unions)
+
+---
+
+**Usage:**
+
+```bash
+rbxc.py [input_file.c or input_file.cpp] -o [output_file.luau] [options]
